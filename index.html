@@ -4,19 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
+    <div class="container">
         <h1>Welcome to My Homepage</h1>
-        <div>
-            <div class="counter" > </div>
+        <div x-data="counter">
+            <h2>Counter Widget</h2>
+            <div class="counter" x-text="count"></div>
             <div>
-                  <button class="increment" >Increment</button>
-                  <button class="decrement" >Decrement</button>
-                  <script type="module" src="./counter.html"></script>
+                <button @click="increment()">Increment</button>
+                <button @click="decrement()">Decrement</button>
+                <button @click="reset()">Reset</button>
             </div>
-       </div>
+        </div>
     </div>
-    <script src="counter.js" defer></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <script src="counter.js" ></script>
+    
 </body>
 </html>
